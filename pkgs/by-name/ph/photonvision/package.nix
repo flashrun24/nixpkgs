@@ -11,7 +11,7 @@
 
 stdenv.mkDerivation rec {
   pname = "photonvision";
-  version = "2024.3.1";
+  version = "2025.2.1";
 
   src =
     {
