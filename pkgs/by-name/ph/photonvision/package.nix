@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
     {
       "x86_64-linux" = fetchurl {
         url = "https://github.com/PhotonVision/photonvision/releases/download/v${version}/photonvision-v${version}-linuxx64.jar";
-        hash = "sha256-t9drkGFA3IurZqWAkzEaONVJkp5JHMEFBBW50r+SD68=";
+        hash = "sha256-yEb6GCt29DjZNDsIqDvF/AiCw3QVMxUFKQM22OlMl7Q=";
       };
       "aarch64-linux" = fetchurl {
         url = "https://github.com/PhotonVision/photonvision/releases/download/v${version}/photonvision-v${version}-linuxarm64.jar";
