@@ -3,7 +3,7 @@
   stdenv,
   fetchurl,
   makeWrapper,
-  temurin-jre-bin-11,
+  temurin-jre-bin-17,
   bash,
   suitesparse,
   nixosTests,
@@ -35,7 +35,7 @@ stdenv.mkDerivation rec {
 
     install -D $src $out/lib/photonvision.jar
 
-    makeWrapper ${temurin-jre-bin-11}/bin/java $out/bin/photonvision \
+    makeWrapper ${temurin-jre-bin-17}/bin/java $out/bin/photonvision \
       --prefix LD_LIBRARY_PATH : ${
         lib.makeLibraryPath [
           stdenv.cc.cc
@@ -44,7 +44,7 @@ stdenv.mkDerivation rec {
       } \
       --prefix PATH : ${
         lib.makeBinPath [
-          temurin-jre-bin-11
+          temurin-jre-bin-17
           bash.out
         ]
       } \
